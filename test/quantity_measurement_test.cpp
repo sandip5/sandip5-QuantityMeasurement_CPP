@@ -1,10 +1,18 @@
 #include "../main/model/quantity_measurement.h"
+#include "../main/model/feet.h"
 #include <gtest/gtest.h>
 
 TEST(LengthComparisionTest, _one_feet_and_twelve_inch__should_be_equal)
 {
     quantity_measurement quantity;
     ASSERT_EQ(12, quantity.unit_converter(1));
+}
+
+TEST(LengthComparisionTest, _zero_feet_and_zero_feet_should_be_equal)
+{
+    feet first_zero_feet(0);
+    feet second_zero_feet(0);
+    ASSERT_EQ(first_zero_feet, second_zero_feet);
 }
 
 int main(int argc, char **argv)
