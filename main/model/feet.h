@@ -7,5 +7,5 @@ public:
 
     bool operator==(feet) const;
 
-    bool operator==(feet *other) const;
+    bool operator==(feet *) const;
 };
