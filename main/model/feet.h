@@ -4,8 +4,5 @@ class feet
 
 public:
     feet(double);
-
-    bool operator==(feet) const;
-
-    bool operator==(feet *) const;
+    double get_value();
 };
