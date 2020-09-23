@@ -26,7 +26,7 @@ TEST(LengthComparisionTest, _null_feet_and_one_feet__should_not_be_equal)
 }
 
 //TC1.4
-TEST(LengthComparisionTest, _first_object_and_second_ref__should_be_equal)
+TEST(LengthComparisionTest, _first_feet_object_and_second_ref_of_first_ref_should_be_equal)
 {
     quantity *first_ref = new quantity(1.0, unit::FEET);
     quantity *second_ref = first_ref;
@@ -47,6 +47,14 @@ TEST(LengthComparisionTest, _first_type_and_second_type_should_not_be_equal)
     quantity first_type(1.0, unit::FEET);
     quantity second_type(1.0, unit::INCH);
     ASSERT_NE(first_type, second_type);
+}
+
+//TC1.7
+TEST(LengthComparisionTest, _zero_inch_and_zero_inch_should_be_equal)
+{
+    quantity first_zero_inch(0.0, unit::INCH);
+    quantity second_zero_inch(0.0, unit::INCH);
+    ASSERT_EQ(first_zero_inch, second_zero_inch);
 }
 
 int main(int argc, char **argv)
