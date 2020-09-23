@@ -80,6 +80,14 @@ TEST(LengthComparisionTest, _first_inch_type_and_second_type_feet_should_not_be_
     ASSERT_NE(first_type, second_type);
 }
 
+//TC1.10
+TEST(LengthComparisionTest, _zero_inch_and_zero_inch_should_be_equal)
+{
+    quantity first_zero_inch(0.0, unit::INCH);
+    quantity second_zero_inch(0.0, unit::INCH);
+    ASSERT_EQ(first_zero_inch, second_zero_inch);
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);
