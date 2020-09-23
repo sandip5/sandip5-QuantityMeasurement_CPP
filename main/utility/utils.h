@@ -5,10 +5,5 @@ namespace util_spc
         LENGTH
     };
 
-    enum UNIT_BASE_FACTOR
-    {
-        INCH = 1,
-        FEET = 12,
-        YARD = 36
-    };
+    constexpr double CM = 1.00, INCH = 2.50, FEET = 30.00, YARD = 90.00;
 }

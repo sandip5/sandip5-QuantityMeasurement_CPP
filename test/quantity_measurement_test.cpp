@@ -120,6 +120,13 @@ TEST(LengthComparisionTest, _one_yard_and_thirty_six_inch__should_be_equal)
     ASSERT_EQ(value_in_yard, value_in_inch);
 }
 
+TEST(LengthComparisionTest, _two_inch_and_five_cm__should_be_equal)
+{
+    quantity value_in_inch(2.0, unit::INCH);
+    quantity value_in_cm(5.0, unit::CM);
+    ASSERT_EQ(value_in_inch, value_in_cm);
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);

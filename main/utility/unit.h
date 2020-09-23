@@ -16,4 +16,5 @@ public:
     static const unit INCH;
     static const unit FEET;
     static const unit YARD;
+    static const unit CM;
 };
