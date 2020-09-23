@@ -197,6 +197,13 @@ TEST(WeightComparisionTest, _one_kg_and_thousand_gram_should_be_equal)
     ASSERT_EQ(value_in_kg, value_in_gram);
 }
 
+TEST(WeightComparisionTest, _one_tonne_and_thousand_kg_should_be_equal)
+{
+    quantity value_in_tonne(1.0, unit::TONNE);
+    quantity value_in_kg(1000.0, unit::KG);
+    ASSERT_EQ(value_in_tonne, value_in_kg);
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);

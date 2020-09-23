@@ -22,4 +22,5 @@ public:
     static const unit ML;
     static const unit KG;
     static const unit GRAM;
+    static const unit TONNE;
 };
