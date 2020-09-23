@@ -182,6 +182,14 @@ TEST(VolumeComparisionTest,
     ASSERT_EQ(7.56, measurement.add_quantity(util_spc::LITRE));
 }
 
+TEST(VolumeComparisionTest, _addition_of_one_litre_and_thousand_ml_should_be_two_litre)
+{
+    quantity first_litre(1.0, unit::LITRE);
+    quantity second_ml(1000.0, unit::ML);
+    quantity_measurement measurement(&first_litre, &second_ml);
+    ASSERT_EQ(2.0, measurement.add_quantity(util_spc::LITRE));
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);
