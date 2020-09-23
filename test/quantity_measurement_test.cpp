@@ -204,6 +204,14 @@ TEST(WeightComparisionTest, _one_tonne_and_thousand_kg_should_be_equal)
     ASSERT_EQ(value_in_tonne, value_in_kg);
 }
 
+TEST(WeightComparisionTest, _addition_of_one_tonne_and_thousand_kg_should_be_thousand_one_kg)
+{
+    quantity first_tonne(1.0, unit::TONNE);
+    quantity second_kg(1.0, unit::KG);
+    quantity_measurement measurement(&first_tonne, &second_kg);
+    ASSERT_EQ(1001.0, measurement.add_quantity(util_spc::KG));
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);
