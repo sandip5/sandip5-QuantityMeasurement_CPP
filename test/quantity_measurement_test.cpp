@@ -50,11 +50,10 @@ TEST(LengthComparisionTest, _first_type_and_second_type_should_not_be_equal)
 }
 
 //TC1.7
-TEST(LengthComparisionTest, _zero_inch_and_zero_inch_should_be_equal)
+TEST(LengthComparisionTest, _null_inch_and_one_inch__should_not_be_equal)
 {
-    quantity first_zero_inch(0.0, unit::INCH);
-    quantity second_zero_inch(0.0, unit::INCH);
-    ASSERT_EQ(first_zero_inch, second_zero_inch);
+    quantity first_one_inch(1.0, unit::INCH);
+    ASSERT_NE(&first_one_inch, nullptr);
 }
 
 //TC1.8
@@ -71,6 +70,14 @@ TEST(LengthComparisionTest, _first_inch_ref_and_second_inch_ref__should_not_be_e
     quantity *first_ref = new quantity(1.0, unit::INCH);
     quantity *second_ref = new quantity(1.0, unit::INCH);
     ASSERT_NE(first_ref, second_ref);
+}
+
+//TC1.9
+TEST(LengthComparisionTest, _first_inch_type_and_second_type_feet_should_not_be_equal)
+{
+    quantity first_type(1.0, unit::INCH);
+    quantity second_type(1.0, unit::FEET);
+    ASSERT_NE(first_type, second_type);
 }
 
 int main(int argc, char **argv)
