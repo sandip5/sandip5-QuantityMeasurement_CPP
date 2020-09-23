@@ -57,6 +57,22 @@ TEST(LengthComparisionTest, _zero_inch_and_zero_inch_should_be_equal)
     ASSERT_EQ(first_zero_inch, second_zero_inch);
 }
 
+//TC1.8
+TEST(LengthComparisionTest, _first_inch_object_and_second_ref_of_first_ref_should_be_equal)
+{
+    quantity *first_ref = new quantity(1.0, unit::INCH);
+    quantity *second_ref = first_ref;
+    ASSERT_EQ(first_ref, second_ref);
+}
+
+//TC1.8
+TEST(LengthComparisionTest, _first_inch_ref_and_second_inch_ref__should_not_be_equal)
+{
+    quantity *first_ref = new quantity(1.0, unit::INCH);
+    quantity *second_ref = new quantity(1.0, unit::INCH);
+    ASSERT_NE(first_ref, second_ref);
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);
