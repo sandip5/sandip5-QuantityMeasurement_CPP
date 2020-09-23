@@ -17,4 +17,6 @@ public:
     static const unit FEET;
     static const unit YARD;
     static const unit CM;
+    static const unit GALLON;
+    static const unit LITRE;
 };

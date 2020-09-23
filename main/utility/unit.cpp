@@ -9,3 +9,7 @@ const unit unit::FEET(util_spc::FEET, util_spc::UNIT_TYPE::LENGTH);
 const unit unit::YARD(util_spc::YARD, util_spc::UNIT_TYPE::LENGTH);
 
 const unit unit::CM(util_spc::CM, util_spc::UNIT_TYPE::LENGTH);
+
+const unit unit::GALLON(util_spc::GALLON, util_spc::UNIT_TYPE::VOLUME);
+
+const unit unit::LITRE(util_spc::LITRE, util_spc::UNIT_TYPE::VOLUME);
