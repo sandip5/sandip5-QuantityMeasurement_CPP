@@ -151,6 +151,14 @@ TEST(LengthComparisionTest, _addition_of_one_feet_and_one_feet__should_be_twenty
     ASSERT_EQ(24.0, measurement.add_quantity(util_spc::INCH));
 }
 
+TEST(LengthComparisionTest, _addition_of_two_inch_and_two_and_half_cm__should_be_three_inch)
+{
+    quantity first_inch(2.0, unit::INCH);
+    quantity second_cm(2.5, unit::CM);
+    quantity_measurement measurement(&first_inch, &second_cm);
+    ASSERT_EQ(3.0, measurement.add_quantity(util_spc::INCH));
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);
