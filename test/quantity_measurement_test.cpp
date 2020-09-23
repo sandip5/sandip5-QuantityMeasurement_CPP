@@ -165,6 +165,14 @@ TEST(VolumeComparisionTest, _one_gallon_and_three_point_seven_eight_litre_should
     quantity value_in_litre(3.78, unit::LITRE);
     ASSERT_EQ(value_in_gallon, value_in_litre);
 }
+
+TEST(VolumeComparisionTest, _one_litre_and_thousand_ml_should_be_equal)
+{
+    quantity value_in_litre(1.0, unit::LITRE);
+    quantity value_in_ml(1000.0, unit::ML);
+    ASSERT_EQ(value_in_litre, value_in_ml);
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);
