@@ -132,7 +132,15 @@ TEST(LengthComparisionTest, _addition_of_two_inch_and_two_inch__should_be_four_i
     quantity first_inch(2.0, unit::INCH);
     quantity second_inch(2.0, unit::INCH);
     quantity_measurement measurement(&first_inch, &second_inch);
-    ASSERT_EQ(4.0, measurement.add_quantity());
+    ASSERT_EQ(4.0, measurement.add_quantity(util_spc::INCH));
+}
+
+TEST(LengthComparisionTest, _addition_of_one_feet_and_two_inch__should_be_fourteen_inch)
+{
+    quantity first_feet(1.0, unit::FEET);
+    quantity second_inch(2.0, unit::INCH);
+    quantity_measurement measurement(&first_feet, &second_inch);
+    ASSERT_EQ(14.0, measurement.add_quantity(util_spc::INCH));
 }
 
 int main(int argc, char **argv)
