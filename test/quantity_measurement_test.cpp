@@ -190,6 +190,13 @@ TEST(VolumeComparisionTest, _addition_of_one_litre_and_thousand_ml_should_be_two
     ASSERT_EQ(2.0, measurement.add_quantity(util_spc::LITRE));
 }
 
+TEST(WeightComparisionTest, _one_kg_and_thousand_gram_should_be_equal)
+{
+    quantity value_in_kg(1.0, unit::KG);
+    quantity value_in_gram(1000.0, unit::GRAM);
+    ASSERT_EQ(value_in_kg, value_in_gram);
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);

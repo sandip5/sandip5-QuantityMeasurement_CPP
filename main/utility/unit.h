@@ -20,4 +20,6 @@ public:
     static const unit GALLON;
     static const unit LITRE;
     static const unit ML;
+    static const unit KG;
+    static const unit GRAM;
 };

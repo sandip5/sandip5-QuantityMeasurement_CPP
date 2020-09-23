@@ -15,3 +15,7 @@ const unit unit::GALLON(util_spc::GALLON, util_spc::UNIT_TYPE::VOLUME);
 const unit unit::LITRE(util_spc::LITRE, util_spc::UNIT_TYPE::VOLUME);
 
 const unit unit::ML(util_spc::ML, util_spc::UNIT_TYPE::VOLUME);
+
+const unit unit::KG(util_spc::KG, util_spc::UNIT_TYPE::WEIGHT);
+
+const unit unit::GRAM(util_spc::GRAM, util_spc::UNIT_TYPE::WEIGHT);
