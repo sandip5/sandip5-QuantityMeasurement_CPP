@@ -112,6 +112,14 @@ TEST(LengthComparisionTest, _one_inch_and_one_yard__should_not_be_equal)
     ASSERT_NE(value_in_inch, value_in_yard);
 }
 
+//TC1.16
+TEST(LengthComparisionTest, _one_yard_and_thirty_six_inch__should_be_equal)
+{
+    quantity value_in_yard(1.0, unit::YARD);
+    quantity value_in_inch(36.0, unit::INCH);
+    ASSERT_EQ(value_in_yard, value_in_inch);
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);
