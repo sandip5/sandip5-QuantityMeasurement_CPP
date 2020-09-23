@@ -8,6 +8,7 @@ namespace util_spc
     enum UNIT_BASE_FACTOR
     {
         INCH = 1,
-        FEET = 12
+        FEET = 12,
+        YARD = 36
     };
 }

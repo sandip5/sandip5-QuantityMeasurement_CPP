@@ -88,6 +88,14 @@ TEST(LengthComparisionTest, _zero_inch_and_zero_inch_should_be_equal)
     ASSERT_EQ(first_zero_inch, second_zero_inch);
 }
 
+//TC1.13
+TEST(LengthComparisionTest, _three_feet_and_one_yard__should_be_equal)
+{
+    quantity value_in_feet(3.0, unit::FEET);
+    quantity value_in_yard(1.0, unit::YARD);
+    ASSERT_EQ(value_in_feet, value_in_yard);
+}
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);
