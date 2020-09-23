@@ -23,4 +23,6 @@ public:
     static const unit KG;
     static const unit GRAM;
     static const unit TONNE;
+    static const unit FAHRENHEIT;
+    static const unit CELSIUS;
 };

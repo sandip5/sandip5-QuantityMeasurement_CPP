@@ -21,3 +21,7 @@ const unit unit::TONNE(util_spc::TONNE, util_spc::UNIT_TYPE::WEIGHT);
 const unit unit::KG(util_spc::KG, util_spc::UNIT_TYPE::WEIGHT);
 
 const unit unit::GRAM(util_spc::GRAM, util_spc::UNIT_TYPE::WEIGHT);
+
+const unit unit::FAHRENHEIT(util_spc::FAHRENHEIT, util_spc::UNIT_TYPE::TEMPERATURE);
+
+const unit unit::CELSIUS(util_spc::CELSIUS, util_spc::UNIT_TYPE::TEMPERATURE);
