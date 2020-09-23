@@ -2,10 +2,10 @@
 
 class quantity
 {
+public:
     double value;
     unit unit_type;
 
-public:
     quantity(double value, unit unit_type) : unit_type(unit_type), value(value * (unit_type.value)) {}
 
     bool operator==(quantity *other) const

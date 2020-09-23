@@ -1,4 +1,4 @@
-#include "../main/model/quantity.cpp"
+#include "../main/model/quantity_measurement.h"
 #include <typeinfo>
 #include <gtest/gtest.h>
 
@@ -125,6 +125,14 @@ TEST(LengthComparisionTest, _two_inch_and_five_cm__should_be_equal)
     quantity value_in_inch(2.0, unit::INCH);
     quantity value_in_cm(5.0, unit::CM);
     ASSERT_EQ(value_in_inch, value_in_cm);
+}
+
+TEST(LengthComparisionTest, _addition_of_two_inch_and_two_inch__should_be_four_inch)
+{
+    quantity first_inch(2.0, unit::INCH);
+    quantity second_inch(2.0, unit::INCH);
+    quantity_measurement measurement(&first_inch, &second_inch);
+    ASSERT_EQ(4.0, measurement.add_quantity());
 }
 
 int main(int argc, char **argv)
