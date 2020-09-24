@@ -1,6 +1,7 @@
 #include "unit.h"
 
-unit::unit(double conversion_factor, util_spc::UNIT_TYPE type) : conversion_factor(conversion_factor), type(type) {}
+unit::unit(double conversion_factor, util_spc::UNIT_TYPE type)
+    : conversion_factor(conversion_factor), type(type) {}
 
 const unit unit::INCH(util_spc::INCH, util_spc::UNIT_TYPE::LENGTH);
 

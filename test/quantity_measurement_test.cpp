@@ -1,4 +1,4 @@
-#include "../main/model/quantity_measurement.h"
+#include "../main/model/quantity.h"
 #include <gtest/gtest.h>
 
 TEST(LengthComparisionTest, _zero_feet_and_zero_feet_should_be_equal)
@@ -11,7 +11,7 @@ TEST(LengthComparisionTest, _zero_feet_and_zero_feet_should_be_equal)
 TEST(LengthComparisionTest, _null_feet_and_one_feet__should_not_be_equal)
 {
     quantity first_one_feet(1.0, unit::FEET);
-    ASSERT_FALSE(first_one_feet == nullptr);
+    ASSERT_NE(&first_one_feet, nullptr);
 }
 
 TEST(LengthComparisionTest, _first_feet_object_and_second_ref_of_first_ref_should_be_equal)
@@ -101,32 +101,32 @@ TEST(LengthComparisionTest, _addition_of_two_inch_and_two_inch__should_be_four_i
 {
     quantity first_inch(2.0, unit::INCH);
     quantity second_inch(2.0, unit::INCH);
-    quantity_measurement measurement(&first_inch, &second_inch);
-    ASSERT_EQ(4.0, measurement.add_quantity(util_spc::INCH));
+    quantity four_inch(4.0, unit::INCH);
+    ASSERT_EQ(four_inch, first_inch + second_inch);
 }
 
 TEST(LengthComparisionTest, _addition_of_one_feet_and_two_inch__should_be_fourteen_inch)
 {
     quantity first_feet(1.0, unit::FEET);
     quantity second_inch(2.0, unit::INCH);
-    quantity_measurement measurement(&first_feet, &second_inch);
-    ASSERT_EQ(14.0, measurement.add_quantity(util_spc::INCH));
+    quantity fourteen_inch(14.0, unit::INCH);
+    ASSERT_EQ(fourteen_inch, first_feet + second_inch);
 }
 
 TEST(LengthComparisionTest, _addition_of_one_feet_and_one_feet__should_be_twentyfour_inch)
 {
     quantity first_feet(1.0, unit::FEET);
     quantity second_feet(1.0, unit::FEET);
-    quantity_measurement measurement(&first_feet, &second_feet);
-    ASSERT_EQ(24.0, measurement.add_quantity(util_spc::INCH));
+    quantity twenty_four_inch(24.0, unit::INCH);
+    ASSERT_EQ(twenty_four_inch, first_feet + second_feet);
 }
 
 TEST(LengthComparisionTest, _addition_of_two_inch_and_two_and_half_cm__should_be_three_inch)
 {
     quantity first_inch(2.0, unit::INCH);
     quantity second_cm(2.5, unit::CM);
-    quantity_measurement measurement(&first_inch, &second_cm);
-    ASSERT_EQ(3.0, measurement.add_quantity(util_spc::INCH));
+    quantity three_inch(3.0, unit::INCH);
+    ASSERT_EQ(three_inch, first_inch + second_cm);
 }
 
 TEST(VolumeComparisionTest, _one_gallon_and_three_point_seven_eight_litre_should_be_equal)
@@ -148,16 +148,16 @@ TEST(VolumeComparisionTest,
 {
     quantity first_gallon(1.0, unit::GALLON);
     quantity second_litre(3.78, unit::LITRE);
-    quantity_measurement measurement(&first_gallon, &second_litre);
-    ASSERT_EQ(7.56, measurement.add_quantity(util_spc::LITRE));
+    quantity _7_point_56_litere(7.56, unit::LITRE);
+    ASSERT_EQ(_7_point_56_litere, first_gallon + second_litre);
 }
 
 TEST(VolumeComparisionTest, _addition_of_one_litre_and_thousand_ml_should_be_two_litre)
 {
     quantity first_litre(1.0, unit::LITRE);
     quantity second_ml(1000.0, unit::ML);
-    quantity_measurement measurement(&first_litre, &second_ml);
-    ASSERT_EQ(2.0, measurement.add_quantity(util_spc::LITRE));
+    quantity two_litres(2.0, unit::LITRE);
+    ASSERT_EQ(two_litres, first_litre + second_ml);
 }
 
 TEST(WeightComparisionTest, _one_kg_and_thousand_gram_should_be_equal)
@@ -178,8 +178,8 @@ TEST(WeightComparisionTest, _addition_of_one_tonne_and_thousand_kg_should_be_tho
 {
     quantity first_tonne(1.0, unit::TONNE);
     quantity second_kg(1.0, unit::KG);
-    quantity_measurement measurement(&first_tonne, &second_kg);
-    ASSERT_EQ(1001.0, measurement.add_quantity(util_spc::KG));
+    quantity one_thousand_one_kg(1001.0, unit::KG);
+    ASSERT_EQ(one_thousand_one_kg, first_tonne + second_kg);
 }
 
 TEST(TemperatureComparisionTest, _212F_and_100C_should_be_equal)
