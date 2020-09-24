@@ -51,22 +51,10 @@ bool quantity::operator==(quantity other) const
 
 bool quantity::operator!=(quantity *other) const
 {
-    if (this->unit_type.type == other->unit_type.type &&
-        this->unit_type.conversion_factor == other->unit_type.conversion_factor)
-    {
-        return (this->value == other->value);
-    }
-
-    return (this->unit_type.type == other->unit_type.type);
+    return !(this == other);
 }
 
 bool quantity::operator!=(quantity other) const
 {
-    if (this->unit_type.type == other.unit_type.type &&
-        this->unit_type.conversion_factor == other.unit_type.conversion_factor)
-    {
-        return (this->value == other.value);
-    }
-
-    return (this->unit_type.type == other.unit_type.type);
+    return !(*this == other);
 }
