@@ -3,14 +3,14 @@
 class unit
 {
 public:
-    double value;
+    double conversion_factor;
 
     util_spc::UNIT_TYPE type;
 
     unit() {}
 
 private:
-    unit(double value, util_spc::UNIT_TYPE type);
+    unit(double, util_spc::UNIT_TYPE);
 
 public:
     static const unit INCH;

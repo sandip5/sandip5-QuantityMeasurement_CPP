@@ -1,7 +1,26 @@
 {
     "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
     "files.associations": {
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "any": "cpp",
+        "array": "cpp",
+        "*.tcc": "cpp",
+        "chrono": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "algorithm": "cpp",
+        "functional": "cpp",
+        "memory": "cpp",
+        "optional": "cpp",
+        "ratio": "cpp",
+        "system_error": "cpp",
+        "tuple": "cpp",
+        "cmath": "cpp",
+        "fstream": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp",
+        "utility": "cpp",
+        "variant": "cpp"
     },
     "editor.tokenColorCustomizations": {
         "textMateRules": [
