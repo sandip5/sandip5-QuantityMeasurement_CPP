@@ -1,6 +1,4 @@
 #include "../main/model/quantity_measurement.h"
-#include "../main/utility/unit_converter.h"
-#include <typeinfo>
 #include <gtest/gtest.h>
 
 //TC1.1
@@ -213,11 +211,11 @@ TEST(WeightComparisionTest, _addition_of_one_tonne_and_thousand_kg_should_be_tho
     ASSERT_EQ(1001.0, measurement.add_quantity(util_spc::KG));
 }
 
-TEST(TemperatureComparisionTest, _one_212F_and_100C_should_be_equal)
+TEST(TemperatureComparisionTest, _212F_and_100C_should_be_equal)
 {
     quantity value_in_fahrenheit(212.0, unit::FAHRENHEIT);
     quantity value_in_celsius(100.0, unit::CELSIUS);
-    ASSERT_EQ(value_in_fahrenheit.value, convert_celsius_to_fahrenheit(value_in_celsius.value));
+    ASSERT_EQ(value_in_fahrenheit, value_in_celsius);
 }
 
 int main(int argc, char **argv)
